@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>FORM REGISTRATION</h1>
+    <h4>Latte` House </h4>
+    <img src="https://t3.ftcdn.net/jpg/05/08/82/52/360_F_508825242_rQErDh6s821F0jzPGENglE2qpIcxpEt7.jpg" height="250" width="300" alt="coffee">
+    <style>
+    *{
+  background-color: rgb(4, 5, 7);
+  color: pink;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<form>
+  <br><br>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday"><br><br>
+  <label for="fname">Your Gender:</label>
+  <input type="radio" id="gender" name="gender" value="male">
+  <label for="gender">Male</label>
+  <input type="radio" id="gender" name="gender" value="female">
+  <label for="gender">Female</label><br>
+ <br>
+    <label for="coffee">Choose a coffee flavour(Customized latte` art) :</label>
+    <select id="coffee" name="coffee">
+      <option value="Latte">Latte</option>
+      <option value="Espresso">Espresso</option>
+      <option value="Cappuccino ">Cappuccino</option>
+      <option value="Frappuccino">Frappuccino</option>
+      <option value="Mocha">Mocha</option>
+      <option value="Americano">Americano</option>
+      <option value="Macchiato">Macchiato</option>
+      <option value="Affogato">Affogato</option>
+      <option value="French Vanilla">French Vanilla</option>
+      <option value="None">None</option>
+    </select><br><br>
+    <label for="snack">A snack you'd like to enjoy :</label>
+    <select>
+      <option value="White sauce pasta">White sauce pasta</option>
+      <option value="muffins/cupcakes(all flavours)">muffins/cupcakes(all flavours)</option>
+      <option value="Red velvet cake">Red velvet cake</option>
+      <option value="Garlic bread">Garlic bread</option>
+      <option value="Red sauce pasta">Red sauce pasta</option>
+      <option value="French fries">French fries</option>
+      <option value="Chocolate chip cake">Chocolate chip cake</option>
+      <option value="Black forest cake">Black forest cake</option>
+      <option value="Spagetti">Spagetti</option>
+      <option value="Mochi(Sakura)">Mochi(Sakura)</option>
+      <option value="Parfait">Parfait</option>
+      <option value="None">None</option>
+    </select><br><br>
+    <label for="Drinks">Choose a Refreshing drink(Customized) :</label>
+    <select>
+      <option value="Black milk tea(boba)">Black milk tea(boba)</option>
+      <option value="Milk tea">Milk tea</option>
+      <option value="Lime tea">Lime tea</option>
+      <option value="Chocolate Milk">Chocolate milk</option>
+      <option value="Tapioca boba">Tapioca boba</option>
+      <option value="Hot chocolate">Hot chocolate(with or without nuts)</option>
+      <option value="Thai Milk tea">Thai Milk tea</option>
+      <option value="Lychee fruit tea">Lychee fruit tea</option>
+      <option value="Popping boba tea">Popping boba tea</option>
+      <option value="None">None</option>
+    </select><br><br><br>
+    <div class="d-grid gap-2 d-md-block">
+      <button class="btn btn-primary" type="button">Submit</button>
+      <button class="btn btn-primary" type="button">Reset</button>
+    </div><br>
+
+</form>
+<script>
+  // Handle Submit Button
+  document.querySelector(".btn.btn-primary:nth-of-type(1)").addEventListener("click", function () {
+    const fname = document.getElementById("fname").value;
+    const lname = document.getElementById("lname").value;
+    const birthday = document.getElementById("birthday").value;
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const coffee = document.getElementById("coffee").value;
+    const snack = document.querySelectorAll("select")[1].value;
+    const drink = document.querySelectorAll("select")[2].value;
+
+    if (!fname || !lname || !birthday || !gender) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    alert(
+      `Thank you, ${fname} ${lname}!\n` +
+      `Birthday: ${birthday}\n` +
+      `Gender: ${gender.value}\n` +
+      `Coffee: ${coffee}\n` +
+      `Snack: ${snack}\n` +
+      `Drink: ${drink}`
+    );
+  });
+
+  // Handle Reset Button
+  document.querySelector(".btn.btn-primary:nth-of-type(2)").addEventListener("click", function () {
+    document.querySelector("form").reset();
+  });
+</script>
+</body>
+</html>

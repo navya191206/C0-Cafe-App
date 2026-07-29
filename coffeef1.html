@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latte House Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-wrapper">
+    <h1>FORM REGISTRATION</h1>
+    <h4>Latte` House</h4>
+    <img src="https://t3.ftcdn.net/jpg/05/08/82/52/360_F_508825242_rQErDh6s821F0jzPGENglE2qpIcxpEt7.jpg" alt="coffee" />
+
+    <form id="orderForm">
+      <input type="text" id="fname" placeholder="First Name" required />
+      <input type="text" id="lname" placeholder="Last Name" required />
+      <input type="date" id="birthday" required />
+
+      <div class="gender-group">
+        <label>Your Gender:</label>
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+      </div>
+
+      <label for="coffee">Choose a coffee flavour:</label>
+      <select id="coffee">
+        <option value="Latte">Latte</option>
+        <option value="Espresso">Espresso</option>
+        <option value="Cappuccino">Cappuccino</option>
+        <option value="Frappuccino">Frappuccino</option>
+        <option value="Mocha">Mocha</option>
+        <option value="Americano">Americano</option>
+        <option value="Macchiato">Macchiato</option>
+        <option value="Affogato">Affogato</option>
+        <option value="French Vanilla">French Vanilla</option>
+        <option value="None">None</option>
+      </select>
+
+      <label for="snack">Choose a snack:</label>
+      <select id="snack">
+        <option value="White sauce pasta">White sauce pasta</option>
+        <option value="Muffins/Cupcakes">Muffins/Cupcakes</option>
+        <option value="Red velvet cake">Red velvet cake</option>
+        <option value="Garlic bread">Garlic bread</option>
+        <option value="French fries">French fries</option>
+        <option value="Chocolate chip cake">Chocolate chip cake</option>
+        <option value="Black forest cake">Black forest cake</option>
+        <option value="Spaghetti">Spaghetti</option>
+        <option value="Mochi">Mochi</option>
+        <option value="Parfait">Parfait</option>
+        <option value="None">None</option>
+      </select>
+
+      <label for="drink">Choose a refreshing drink:</label>
+      <select id="drink">
+        <option value="Black milk tea">Black milk tea</option>
+        <option value="Milk tea">Milk tea</option>
+        <option value="Lime tea">Lime tea</option>
+        <option value="Chocolate milk">Chocolate milk</option>
+        <option value="Tapioca boba">Tapioca boba</option>
+        <option value="Hot chocolate">Hot chocolate</option>
+        <option value="Thai milk tea">Thai milk tea</option>
+        <option value="Lychee fruit tea">Lychee fruit tea</option>
+        <option value="Popping boba tea">Popping boba tea</option>
+        <option value="None">None</option>
+      </select>
+
+      <div class="button-group">
+        <button type="submit">Submit</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="order.js"></script>
+</body>
+</html>
